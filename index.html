@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Blog Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navigation will go here -->
+    <nav class="navbar">
+        <div class="logo">MyBlog.</div>
+        <ul class="nav-links">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#categories">Categories</a></li>
+            <li><a href="#featured">Featured</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+            <div class="search-box">
+                <input type="text" placeholder="Search...">
+                <i class="fa-solid fa-search"></i>
+            </div>
+            <button id="theme-toggle"><i class="fa-solid fa-moon"></i></button>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content will be injected here -->
+    <header class="hero" id="home">
+        <div class="hero-content">
+            <h1>Stories, Ideas & Insights That Matter</h1>
+            <p>Discover a world of knowledge, creativity, and inspiration. Join our community of thinkers and creators.
+            </p>
+            <div class="hero-btns">
+                <a href="#blogs" class="btn primary">Explore Blogs</a>
+                <a href="#newsletter" class="btn secondary">Subscribe</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Featured Section -->
+        <section id="featured" class="featured-section">
+            <h2 class="section-title">Featured Posts</h2>
+            <div class="featured-grid" id="featured-grid">
+                <!-- Javascript will populate this -->
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section id="categories" class="categories-section">
+            <h2 class="section-title">Explore Topics</h2>
+            <div class="categories-grid" id="categories-grid">
+                <!-- Javascript will populate this -->
+            </div>
+        </section>
+
+        <!-- Blog Listing Section -->
+        <section id="blogs" class="blog-listing-section">
+            <div class="blog-header">
+                <h2 class="section-title">Latest Articles</h2>
+                <div class="filter-controls">
+                    <!-- Filters could go here -->
+                </div>
+            </div>
+            <div class="blog-grid" id="blog-grid">
+                <!-- Javascript will populate this -->
+            </div>
+            <div class="pagination">
+                <button class="btn load-more">Load More</button>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section id="newsletter" class="newsletter-section">
+            <div class="newsletter-content">
+                <h2>Stay Updated</h2>
+                <p>Get the latest articles and insights delivered straight to your inbox.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn primary">Subscribe</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-container" style="max-width: 600px; margin: 0 auto;">
+                <form class="contact-form" style="display: flex; flex-direction: column; gap: 1rem;">
+                    <input type="text" placeholder="Your Name"
+                        style="padding: 1rem; border-radius: 10px; border: 1px solid #ddd; width: 100%;">
+                    <input type="email" placeholder="Your Email"
+                        style="padding: 1rem; border-radius: 10px; border: 1px solid #ddd; width: 100%;">
+                    <textarea placeholder="Your Message" rows="5"
+                        style="padding: 1rem; border-radius: 10px; border: 1px solid #ddd; width: 100%; font-family: inherit;"></textarea>
+                    <button type="submit" class="btn primary" style="width: 100%;">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>MyBlog.</h3>
+                <p>Empowering readers with quality content.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 MyBlog. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Single Blog Modal -->
+    <div id="blog-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modal-body">
+                <!-- Content injected via JS -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
